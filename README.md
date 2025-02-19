@@ -1,4 +1,4 @@
-![Screenshot 2025-02-18 220126](https://github.com/user-attachments/assets/f3f62e24-194a-4e4d-ac11-2f31fe317237)
+
 # 🚗 Parking Lot Management System
 
 ## 📌 Overview
@@ -88,3 +88,6 @@ It supports different vehicle types and ensures **concurrency safety** using thr
    - Entry point of the application.
    - **Key Method**:
      - `main()`: Initializes the parking lot system and handles user interactions.
+
+![Screenshot 2025-02-18 220126](https://github.com/user-attachments/assets/f3f62e24-194a-4e4d-ac11-2f31fe317237)
+
