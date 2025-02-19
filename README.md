@@ -42,12 +42,48 @@ It supports different vehicle types and ensures **concurrency safety** using thr
 ## 🚀 Class Diagram Explanation for Parking Lot System
 
 1. **ParkingLot**:
-- The main class managing the entire parking lot.
-- Stores a list of floors and a vehicle map to track parked vehicles.
-- Uses threading lock for concurrency safety.
-- Key Methods:
-       - park_vehicle(vehicle_number, vehicle_type): Assigns a vehicle to an available spot.
-       - leave_vehicle(vehicle_number): Removes a vehicle from the parking lot.
-       - query_parking_lot(): Checks the current parking status.
-       - is_full(): Determines if the parking lot is full.
-       - find_vehicle(vehicle_number): Locates a parked vehicle.
+   - The main class managing the entire parking lot.
+   - Stores a list of floors and a vehicle map to track parked vehicles.
+   - Uses threading lock for concurrency safety.
+   - **Key Methods**:
+     - `park_vehicle(vehicle_number, vehicle_type)`: Assigns a vehicle to an available spot.
+     - `leave_vehicle(vehicle_number)`: Removes a vehicle from the parking lot.
+     - `query_parking_lot()`: Checks the current parking status.
+     - `is_full()`: Determines if the parking lot is full.
+     - `find_vehicle(vehicle_number)`: Locates a parked vehicle.
+
+2. **Floor**:
+   - Represents a parking floor in the parking lot.
+   - Contains a list of **parking spots** available on the floor.
+   - **Key Methods**:
+     - `find_available_spot(vehicle_type)`: Finds a suitable spot for the given vehicle type.
+     - `park_vehicle(vehicle)`: Assigns a vehicle to an available spot.
+     - `leave_vehicle(vehicle_number)`: Frees a spot when a vehicle leaves.
+     - `available_spots()`: Returns the count of free spots on the floor.
+
+3. **ParkingSpot**:
+   - Represents an individual parking spot.
+   - Holds information about its status (occupied or free) and the vehicle parked in it.
+   - **Key Methods**:
+     - `park(vehicle)`: Parks a vehicle in this spot.
+     - `leave()`: Frees the parking spot when a vehicle exits.
+
+4. **Vehicle**:
+   - Represents a vehicle that will be parked.
+   - Stores the **vehicle number** and **vehicle type**.
+   - Types of vehicles include:
+     - `Bike`
+     - `Car`
+     - `Truck`
+
+5. **VehicleType (Enumeration)**:
+   - Defines different types of vehicles that can be parked.
+   - Supported types:
+     - `Bike`
+     - `Car`
+     - `Truck`
+
+6. **Main**:
+   - Entry point of the application.
+   - **Key Method**:
+     - `main()`: Initializes the parking lot system and handles user interactions.
