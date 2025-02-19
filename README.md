@@ -35,15 +35,19 @@ It supports different vehicle types and ensures **concurrency safety** using thr
 2. **Performance** → Efficient spot allocation and retrieval operations.  
 3. **Maintainability** → Modular and extendable design for future enhancements.  
 4. **User-Friendly Interface** → Simple and intuitive command-line interface (CLI).  
-5. **Data Persistence (Optional)** → Can be extended to store parking records in a database.  
-6. **Security & Access Control** → Prevents duplicate parking of the same vehicle.  
+5. **Security & Access Control** → Prevents duplicate parking of the same vehicle.  
 
 ---
 
-## 🚀 Getting Started
+## 🚀 Class Diagram Explanation for Parking Lot System
 
-### 🔧 Installation & Setup
-1. **Clone this repository**:
-   ```sh
-   git clone https://github.com/your-repo/parking-lot-system.git
-   cd parking-lot-system
+1. **ParkingLot**:
+- The main class managing the entire parking lot.
+- Stores a list of floors and a vehicle map to track parked vehicles.
+- Uses threading lock for concurrency safety.
+- Key Methods:
+       - park_vehicle(vehicle_number, vehicle_type): Assigns a vehicle to an available spot.
+       - leave_vehicle(vehicle_number): Removes a vehicle from the parking lot.
+       - query_parking_lot(): Checks the current parking status.
+       - is_full(): Determines if the parking lot is full.
+       - find_vehicle(vehicle_number): Locates a parked vehicle.
