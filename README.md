@@ -91,3 +91,8 @@ It supports different vehicle types and ensures **concurrency safety** using thr
 
 ![Screenshot 2025-02-18 220126](https://github.com/user-attachments/assets/f3f62e24-194a-4e4d-ac11-2f31fe317237)
 
+## Working of Code Below
+<img width="958" alt="screenshot1" src="https://github.com/user-attachments/assets/af390b9e-3d57-43ec-87b1-b5f4408dbc30" />
+<img width="959" alt="screenshot2" src="https://github.com/user-attachments/assets/29fa955d-e332-4c58-8eb5-0f013296ebf1" />
+
+
